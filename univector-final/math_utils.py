@@ -17,7 +17,7 @@ def wrapToPi(angle: float) -> float:
     
     if angle > pi:
         return angle - 2 * pi
-    if angle < -pi:
+    elif angle < -pi:
         return 2 * pi + angle
     else:
         return angle

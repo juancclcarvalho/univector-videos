@@ -1,4 +1,3 @@
-import numpy as np
 from typing import List, Tuple
 
 def getVectors(w: int, h: int, step: int, get_vec, ball: Tuple[int, int], obstacles: List[Tuple[int, int]]=None) -> List[List[float]]:
