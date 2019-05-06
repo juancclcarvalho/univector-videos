@@ -69,12 +69,12 @@ def repulsive(r_x: int, r_y: int, __, obs_pos: Tuple[int, int]) -> List[float]:
 
 
 w, h = measures.getArenaSize()
-img_w, img_h = measures.setImageSize()
+img_w, img_h = measures.getImageSize()
 step = measures.step
 
 field = np.zeros((img_h, img_w, 3))
-vectors = getVectors(w, h, step, hyperbolic, ball, None)
-vectorField = draw.drawVectorField(copy(field), vectors, w, h, step, ball, None)
+vectors = getVectors(w, h, step, composition, ball, obstacles)
+vectorField = draw.drawVectorField(copy(field), vectors, w, h, step, ball, obstacles)
 
 cv2.imshow('field', vectorField)
 cv2.waitKey(0)

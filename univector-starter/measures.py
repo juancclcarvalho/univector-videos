@@ -14,7 +14,7 @@ factor = 4.5
 def getArenaSize():
     return arena_w, arena_h
 
-def setImageSize() -> Tuple[int, int]:
+def getImageSize() -> Tuple[int, int]:
 
     img_w = arena_w * factor
     img_h = arena_h * factor
